@@ -2,7 +2,10 @@
   "name": "app",
   "private": true,
   "devDependencies": {
-    "esbuild": "^0.24.0"
+    "daisyui": "^4.12.14",
+    "esbuild": "^0.24.0",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"

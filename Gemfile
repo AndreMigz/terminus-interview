@@ -57,3 +57,5 @@ group :test do
 end
 
 gem "will_paginate", "~> 4.0"
+
+gem "tailwindcss-rails", "~> 3.0"

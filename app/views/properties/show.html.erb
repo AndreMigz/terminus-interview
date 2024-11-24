@@ -1,4 +1,21 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', request.referrer %>
+<div class="card bg-base-100 w-100 shadow-xl mx-auto">
+  <div class="card-body">
+    <div class="flex gap-x-2 text-gray-500 mb-5">
+      <%= link_to 'Edit', edit_property_path(@property) %> |
+      <%= link_to 'Back', request.referrer %>
+    </div>
+    <h2 class="card-title"><%= @property.display_name%></h2>
+    <p class="text-sm">Market Value: <%= @property.market_value %></p>
+    <p class="text-sm">Address: <%= @property.address %></p>
+    <p class="text-sm">Owner Address: <%= @property.owner_address %></p>
+    <p class="text-sm">State ID: <%= @property.state_id %></p>
+    <p class="text-sm">Coordinates:
+      <% if @property.lat.present? && @property.lng.present? %>
+        <%= @property.lat %> lat | <%= @property.lng %> lng
+      <% end %>
+    </p>
+    <p class="text-sm">Construction Type: <%= @property.construction_type %></p>
+    <p class="text-sm">City: <%= @property.city %></p>
+  </div>
+</div>
