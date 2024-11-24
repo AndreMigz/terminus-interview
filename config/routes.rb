@@ -14,5 +14,6 @@ Rails.application.routes.draw do
 
   resources :certs
   resources :properties
+  resources :admin
   root "certs#new"
 end
